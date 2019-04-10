@@ -1,13 +1,22 @@
 
 @import "variables";
+@import "mixins";
 
 body {
   font-size: @main-font-size;
   line-height: @main-line-height;
+  width: 320px;
 }
 
 a {
   text-decoration: none;
 }
 
+.container {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @import "blocks/main-nav";
+@import "blocks/page-header";
+@import "blocks/menu";
