@@ -1,0 +1,63 @@
+.app {
+  padding-top: 110px;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -66px;
+
+  .app__wrapper {
+    .app__picture {
+      margin: 0;
+    }
+
+    .app__picture::after {
+      display: block;
+        content: "";
+        background-image: url("../../img/iphone-hand-mobile@1x.png");
+      background-repeat: no-repeat;
+        width: 258px;
+        height: 286px;
+      }
+    .app__image {
+      vertical-align: bottom;
+    }
+
+    .app__container {
+      background-color: #1d2631;
+    }
+  }
+}
+
+.app__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .app__item {
+
+    .app__link {
+      color: @link-color;
+    }
+  }
+}
+
+.app__description {
+  color: @link-color;
+  margin: 0;
+}
+
+@media (min-width: 320px) {
+  .app__title {
+    display: none;
+    color: @link-color;
+  }
+}
+
+@media (min-width: 660px) {
+  .app {
+    background-image: url(../../img/bg-back-tablet@1x.jpg);
+
+    .app__title {
+      display: block;
+    }
+  }
+}

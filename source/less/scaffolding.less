@@ -30,9 +30,9 @@ body {
   line-height: @main-line-height;
   width: 320px;
   font-family: "OpenSans", "Arial", "sans-serif";
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  /*background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 259px;
+  background-position: 0 259px;*/
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -55,4 +55,16 @@ input[type="radio"].visually-hidden {
 
 a {
   text-decoration: none;
+}
+
+@media (min-width: 660px) {
+  body {
+    width: 660px;
+
+  }
+
+  .container {
+    width: 620px;
+    margin: 0 auto;
+  }
 }

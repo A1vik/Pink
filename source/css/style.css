@@ -1,3 +1,7 @@
+.container {
+  width: 280px;
+  margin: 0 auto;
+}
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/opensans.woff");
@@ -26,9 +30,9 @@ body {
   line-height: 24px;
   width: 320px;
   font-family: "OpenSans", "Arial", "sans-serif";
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  /*background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 259px;
+  background-position: 0 259px;*/
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -48,9 +52,14 @@ input[type="radio"].visually-hidden {
 a {
   text-decoration: none;
 }
-.container {
-  width: 280px;
-  margin: 0 auto;
+@media (min-width: 660px) {
+  body {
+    width: 660px;
+  }
+  .container {
+    width: 620px;
+    margin: 0 auto;
+  }
 }
 .main-nav {
   font-size: 18px;
@@ -105,12 +114,54 @@ a {
   text-transform: uppercase;
   width: 100%;
 }
-.page-main .page-main__picture {
-  margin: 0;
-  padding: 0;
+.app {
+  padding-top: 110px;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -66px;
 }
-.page-main .page-main__picture .page-main__image {
-  margin-top: 110px;
+.app .app__wrapper .app__picture {
+  margin: 0;
+}
+.app .app__wrapper .app__picture::after {
+  display: block;
+  content: "";
+  background-image: url("../../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  width: 258px;
+  height: 286px;
+}
+.app .app__wrapper .app__image {
+  vertical-align: bottom;
+}
+.app .app__wrapper .app__container {
+  background-color: #1d2631;
+}
+.app__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.app__list .app__item .app__link {
+  color: #ffffff;
+}
+.app__description {
+  color: #ffffff;
+  margin: 0;
+}
+@media (min-width: 320px) {
+  .app__title {
+    display: none;
+    color: #ffffff;
+  }
+}
+@media (min-width: 660px) {
+  .app {
+    background-image: url(../../img/bg-back-tablet@1x.jpg);
+  }
+  .app .app__title {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
