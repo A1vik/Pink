@@ -2,22 +2,28 @@
 @page-header-color: #ffffff;
 
 .page-header {
-  background-color: @page-header-bgcolor;
-  /*background-image: url(../../img/bg-back-mobile@1x.jpg);
-  background-position-y: 259px;
-  background-size: 100% auto;
-  background-repeat: no-repeat;*/
+  z-index: 10;
+
+  box-sizing: border-box;
+
   color: @page-header-color;
-  padding-top: 22px;
-  .page-header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 22px;
-  }
+
+  //background-color: @page-header-bgcolor;
 }
 
-@media (min-width: 320px) {
+.page-header__wrapper .container {
+  z-index: 10;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 69px;
+  box-sizing: border-box;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header__logo {
 }
 
 @media (min-width: 660px) {

@@ -1,63 +1,130 @@
 .app {
-  padding-top: 110px;
+  z-index: -1;
+  position: relative;
+
+  margin-top: -69px;
+  min-height: 733px;
+
+  color: @link-color;
+
+  background-color: #1d2631;
+}
+
+.app__image {
+  position: relative;
+
+  min-height: 461px;
+  margin-bottom: 28px;
+
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -66px;
+  background-position: center top;
+}
 
-  .app__wrapper {
-    .app__picture {
-      margin: 0;
-    }
+.app__image-hand {
+  position: absolute;
+  bottom: 0;
+}
 
-    .app__picture::after {
-      display: block;
-        content: "";
-        background-image: url("../../img/iphone-hand-mobile@1x.png");
-      background-repeat: no-repeat;
-        width: 258px;
-        height: 286px;
-      }
-    .app__image {
-      vertical-align: bottom;
-    }
 
-    .app__container {
-      background-color: #1d2631;
-    }
+.app__title {
+  display: none;
+}
+
+.app__button {
+  margin-bottom: 32px;
+  padding: 14px 35px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @link-color;
+
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  background-color: #1d2631;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .app__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
+
   list-style: none;
-
-  .app__item {
-
-    .app__link {
-      color: @link-color;
-    }
-  }
 }
 
 .app__description {
-  color: @link-color;
   margin: 0;
+  padding-bottom: 33px;
+
+  font-weight: 300;
+  text-align: center;
+  color: @link-color;
 }
 
-@media (min-width: 320px) {
-  .app__title {
-    display: none;
-    color: @link-color;
-  }
-}
 
 @media (min-width: 660px) {
   .app {
-    background-image: url(../../img/bg-back-tablet@1x.jpg);
+    //margin-top: -110px;
+  }
 
-    .app__title {
-      display: block;
-    }
+  .app__wrapper {
+    display: flex;
+  }
+
+  .app__image {
+    min-height: 729px;
+
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px 100%;
+    background-position: top center;
+  }
+
+  .app__image-hand {
+    left: auto;
+  }
+
+  .app__box {
+    width: 300px;
+    margin: 0;
+  }
+
+  .app__title {
+    display: block;
+    width: 200px;
+    margin-bottom: 35px;
+
+    color: @link-color;
+    font-size: 40px;
+    line-height: normal;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .app__button {
+    margin-top: 0;
+    margin-bottom: 46px;
+
+    background-color: transparent;
+  }
+
+  .app__list {
+    margin-bottom: 37px;
+  }
+
+  .app__description {
+    padding-bottom: 110px;
   }
 }

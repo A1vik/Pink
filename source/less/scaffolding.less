@@ -26,13 +26,11 @@
 body {
   margin: 0;
   padding: 0;
+  width: 320px;
+
   font-size: @main-font-size;
   line-height: @main-line-height;
-  width: 320px;
-  font-family: "OpenSans", "Arial", "sans-serif";
-  /*background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 259px;*/
+  font-family: "OpenSans", "Arial", sans-serif;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -57,10 +55,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (min-width: 660px) {
   body {
     width: 660px;
-
   }
 
   .container {

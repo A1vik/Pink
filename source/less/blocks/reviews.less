@@ -1,0 +1,44 @@
+.reviews {
+  text-align: center;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.reviews__author-about {
+  display: none;
+}
+
+.reviews__text {
+  line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__author-about {
+    display: block;
+
+    font-weight: 300;
+  }
+
+  .reviews__text {
+    order: -1;
+
+    font-size: 18px;
+  }
+}
